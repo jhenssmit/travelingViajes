@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="travelingViajes.Views.RegistroVuelos">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="Blue" HorizontalOptions="Center">
+                <Label Text="Registro de Vuelos" TextColor="White"/>
+            </Frame>
+            <StackLayout>
+                <Label Text="Nombre del País:"/>
+                <Entry Placeholder="Ingrese el País" x:Name="txtPais"/>
+                <Label Text="Servicios:"/>
+                <Entry Placeholder="Ingrese aqui los servicios que se ofrece" x:Name="txtServicio"/>
+                <Label Text="Precio:"/>
+                <Entry Placeholder="Ingrese el Precio" x:Name="txtPrecio"/>
+                <Button Text="Registrarse" x:Name="btnRegistro" Clicked="btnRegistro_Clicked"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

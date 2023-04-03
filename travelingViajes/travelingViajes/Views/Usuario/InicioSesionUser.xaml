@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="travelingViajes.Views.InicioSesionUser" Padding="10">
+    <ContentPage.Content>
+        <StackLayout>
+        <Frame BackgroundColor="blue" CornerRadius="10" HorizontalOptions="Center">
+            <Label Text="Inicio de Sesión" TextColor="White"/>
+        </Frame>
+            <StackLayout>
+                <Label Text="Email:"/>
+                <Entry Placeholder="Ingrese su Email" x:Name="EntryCorreo"/>
+                <Label Text="Contraseña:"/>
+                <Entry Placeholder="Ingarese su contraseña" x:Name="EntryContasena" IsPassword="True"/>
+                <Button Text="Iniciar Sesión" x:Name="btnIniciar" Clicked="btnIniciar_Clicked"/>
+                <Button Text="Registrarse" x:Name="btnRegistro" Clicked="btnRegistro_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

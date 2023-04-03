@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="travelingViajes.Views.PaginaPrincipalAdmin" Padding="10">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="blue" CornerRadius="10" HorizontalOptions="Center">
+                <Label Text="Bienvenido a la Página Principal" TextColor="White"/>
+            </Frame>
+            <StackLayout>
+                <Button Text="Ver lista de Usuarios" x:Name="btnLista" Clicked="btnLista_Clicked"/>
+                <Button Text="Registrar Paquetes de Vuelos" x:Name="btnRegistro" Clicked="btnRegistro_Clicked"/>
+                <Button Text="Ver lista de Vuelos" x:Name="btnListaVuelos" Clicked="btnListaVuelos_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

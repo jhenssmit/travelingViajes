@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="travelingViajes.Views.Usuario.PaginaPrincipalUsuario">
+    <ContentPage.Content>
+        <StackLayout>
+        <Frame BackgroundColor="blue" CornerRadius="10" HorizontalOptions="Center">
+            <Label Text="Bienvenido a TravelingViajes" TextColor="White"/>
+        </Frame>
+        <StackLayout>
+            <Button Text="Ver lista de Vuelos Disponibles" x:Name="btnDisponible" Clicked="btnDisponible_Clicked"/>
+                <Button Text="Ver Lista de vuelos Reservados" x:Name="btnReservado" Clicked="btnReservado_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

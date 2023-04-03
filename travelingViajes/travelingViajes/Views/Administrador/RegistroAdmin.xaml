@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="travelingViajes.Views.Administrador.RegistroAdmin" Padding="10">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="Blue" HorizontalOptions="Center">
+                <Label Text="Registro Administrador" TextColor="White"/>
+            </Frame>
+            <StackLayout>
+                <Label Text="Usuario:"/>
+                <Entry Placeholder="Ingrese su Usuario" x:Name="txtUsuario"/>
+                <Label Text="Contraseña:"/>
+                <Entry Placeholder="Ingrese su Contraseña" x:Name="txtContraseña" IsPassword="True"/>
+                <Button Text="Registrarse" x:Name="btnRegistro" Clicked="btnRegistro_Clicked"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
