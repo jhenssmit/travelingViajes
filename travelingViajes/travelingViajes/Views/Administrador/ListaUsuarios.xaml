@@ -2,30 +2,49 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="travelingViajes.Views.ListaUsuarios" Padding="10">
+    <ContentPage.Resources>
+        <Color x:Key="primaryColor">#2196F3</Color>
+        <Color x:Key="secondaryColor">#F44336</Color>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontFamily" Value="Arial"/>
+        </Style>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
-            <Frame BackgroundColor="Aqua" CornerRadius="10">
-                <Label Text="Lista de Usuarios Registrados" TextColor="Blue" HorizontalOptions="Center"/>
+            <Frame BackgroundColor="{StaticResource primaryColor}" CornerRadius="10" Padding="10">
+                <Label Text="Lista de Usuarios Registrados" TextColor="White" HorizontalOptions="Center" />
             </Frame>
-            <ListView x:Name="lsUsuario" HasUnevenRows="True">
+            <ListView x:Name="lsUsuario" HasUnevenRows="True" SeparatorVisibility="None">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid RowSpacing="10" Padding="20,10,0,20">
+                            <Grid RowSpacing="10" Padding="20,20,20,20">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
                                 <Label Text="Id Usuario:" Grid.Row="0" />
-                                <Label Text="{Binding IdUsuario}" Grid.Row="0" Grid.Column="1" />
+                                <Label Text="{Binding IdUsuario}" Grid.Row="0" Grid.Column="1" FontSize="20" TextColor="#2196F3"/>
+
                                 <Label Text="Nombre:" Grid.Row="1" />
-                                <Label Text="{Binding Nombres}" Grid.Row="1" Grid.Column="1" />
+                                <Label Text="{Binding Nombres}" Grid.Row="1" Grid.Column="1" FontSize="18" />
+
                                 <Label Text="Apellido Paterno:" Grid.Row="2" />
-                                <Label Text="{Binding AplellidoPaterno}" Grid.Row="2" Grid.Column="1"/>
+                                <Label Text="{Binding AplellidoPaterno}" Grid.Row="2" Grid.Column="1" FontSize="18"/>
+
                                 <Label Text="Apellido Materno:" Grid.Row="3" />
-                                <Label Text="{Binding AplellidoMaterno}" Grid.Row="3" Grid.Column="1" />
+                                <Label Text="{Binding AplellidoMaterno}" Grid.Row="3" Grid.Column="1" FontSize="18" />
+
                                 <Label Text="DNI:" Grid.Row="4" />
-                                <Label Text="{Binding DNI}" Grid.Row="4" Grid.Column="1" />
+                                <Label Text="{Binding DNI}" Grid.Row="4" Grid.Column="1" FontSize="18" />
+
                                 <Label Text="Número Celular:" Grid.Row="5" />
-                                <Label Text="{Binding Celular}" Grid.Row="5" Grid.Column="1" />
-                                <Label Text="Gmail:" Grid.Row="6" />
-                                <Label Text="{Binding Correo}" Grid.Row="6" Grid.Column="1"/>
+                                <Label Text="{Binding Celular}" Grid.Row="5" Grid.Column="1" FontSize="18" />
+
+                                <Label Text="Correo:" Grid.Row="6" />
+                                <Label Text="{Binding Correo}" Grid.Row="6" Grid.Column="1" FontSize="18"/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>

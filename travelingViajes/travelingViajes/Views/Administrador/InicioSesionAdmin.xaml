@@ -3,18 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="travelingViajes.Views.InicioSesionAdmin" Padding="10">
     <ContentPage.Content>
-        <StackLayout>
-            <Frame BackgroundColor="blue" CornerRadius="10" HorizontalOptions="Center">
-                <Label Text="Inicio de Sesión" TextColor="White"/>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Image Source="admin.png" HeightRequest="200" Margin="60,0,0,10"/>
+            <Label Text="Inicio de Sesión" FontSize="Large" TextColor="#333333" Margin="0,0,0,20" HorizontalOptions="Center"/>
+            <Frame CornerRadius="5" BackgroundColor="White" HasShadow="True" Margin="0,0,0,20">
+                <StackLayout Padding="20,10">
+                    <Label Text="Usuario:" TextColor="#666666"/>
+                    <Entry Placeholder="Ingrese su usuario" x:Name="EntryUsuario" FontSize="Medium" Margin="0,5,0,20"/>
+                    <Label Text="Contraseña:" TextColor="#666666"/>
+                    <Entry Placeholder="Ingrese su contraseña" x:Name="EntryContasena" FontSize="Medium" IsPassword="True" Margin="0,5,0,20"/>
+                    <Button Text="Iniciar Sesión" x:Name="btnIniciar" Clicked="btnIniciar_Clicked" BackgroundColor="#1E90FF" TextColor="White"/>
+                </StackLayout>
             </Frame>
-            <StackLayout>
-                <Label Text="Usuario:"/>
-                <Entry Placeholder="Ingrese su Usuario" x:Name="EntryUsuario"/>
-                <Label Text="Contraseña:"/>
-                <Entry Placeholder="Ingarese su contraseña" x:Name="EntryContasena"/>
-                <Button Text="Iniciar Sesión" x:Name="btnIniciar" Clicked="btnIniciar_Clicked"/>
-                <Button Text="Registrarse" x:Name="btnRegistro" Clicked="btnRegistro_Clicked"></Button>
-            </StackLayout>
+            <Button Text="Registrar Administrador" FontSize="Small" TextColor="#1E90FF" HorizontalOptions="Center" Clicked="btnRegistro_Clicked" IsVisible="false"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

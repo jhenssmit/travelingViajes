@@ -4,12 +4,18 @@
              x:Class="travelingViajes.Views.Usuario.PaginaPrincipalUsuario">
     <ContentPage.Content>
         <StackLayout>
-        <Frame BackgroundColor="blue" CornerRadius="10" HorizontalOptions="Center">
-            <Label Text="Bienvenido a TravelingViajes" TextColor="White"/>
-        </Frame>
-        <StackLayout>
-            <Button Text="Ver lista de Vuelos Disponibles" x:Name="btnDisponible" Clicked="btnDisponible_Clicked"/>
-                <Button Text="Ver Lista de vuelos Reservados" x:Name="btnReservado" Clicked="btnReservado_Clicked"/>
+            <Frame BackgroundColor="Blue" CornerRadius="10" Margin="10" Padding="10">
+                <StackLayout>
+                    <Label Text="¡Bienvenido a TravelingViajes!" TextColor="White" FontSize="Title" Margin="5"/>
+                    <BoxView HeightRequest="2" BackgroundColor="White" HorizontalOptions="FillAndExpand" Margin="5"/>
+                </StackLayout>
+            </Frame>
+            <Image Source="travel.jpg" Aspect="AspectFill"/>
+            <StackLayout Margin="20">
+                <Label Text="¿Qué deseas hacer?" FontSize="Large" Margin="0,20,0,10"/>
+                <Button Text="Ver vuelos disponibles" x:Name="btnDisponible" BackgroundColor="#2196F3" TextColor="White" Clicked="btnDisponible_Clicked" CornerRadius="20"/>
+                <Button Text="Ver mis reservas" x:Name="btnReservado" BackgroundColor="#2196F3" TextColor="White" Clicked="btnReservado_Clicked" CornerRadius="20"/>
+                <Button Text="Cerrar sesión" x:Name="btnCerrarSesion" BackgroundColor="#FF5722" TextColor="White" CornerRadius="20" HorizontalOptions="Center" Clicked="btnCerrarSesion_Clicked"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

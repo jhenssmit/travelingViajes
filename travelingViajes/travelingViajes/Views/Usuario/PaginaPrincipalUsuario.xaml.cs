@@ -20,12 +20,17 @@ namespace travelingViajes.Views.Usuario
 
         private async void btnDisponible_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ListaVuelosU());
+            await Navigation.PushModalAsync(new ListaVuelosU());
         }
 
         private void btnReservado_Clicked(object sender, EventArgs e)
         {
 
+        }
+
+        private async void btnCerrarSesion_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
         }
     }
 }

@@ -24,9 +24,9 @@ namespace travelingViajes.Views
 
         private async void btnIniciar_Clicked(object sender, EventArgs e)
         {
-            string correo = EntryCorreo.Text;
-            string contrasena = EntryContasena.Text;
-            var Users = await App.SQLiteDB.VerifyUsuariosCredentialsAsync(correo, contrasena);
+            string Correo = EntryCorreo.Text;
+            string Contrasena = EntryContasena.Text;
+            var Users = await App.SQLiteDB.VerifyUsuariosCredentialsAsync(Correo, Contrasena);
             if (Users)
             {
                 await Navigation.PushAsync(new PaginaPrincipalUsuario());

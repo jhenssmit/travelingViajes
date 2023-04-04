@@ -1,6 +1,8 @@
 ﻿using System;
 using System.IO;
 using travelingViajes.Data;
+using travelingViajes.Views;
+using travelingViajes.Views.Usuario;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

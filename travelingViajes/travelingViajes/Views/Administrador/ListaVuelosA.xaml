@@ -3,25 +3,37 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:modelos="clr-namespace:travelingViajes.Models"
              x:Class="travelingViajes.Views.Administrador.ListaVuelosA" Padding="10">
+    <ContentPage.Resources>
+        <Color x:Key="primaryColor">#2196F3</Color>
+        <Color x:Key="secondaryColor">#F44336</Color>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontFamily" Value="Arial"/>
+        </Style>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
-            <Frame BackgroundColor="Aqua" CornerRadius="10">
-                <Label Text="Lista de Vuelos Registrados" TextColor="Blue" HorizontalOptions="Center"/>
+                <Frame  BackgroundColor="{StaticResource primaryColor}"  CornerRadius="10">
+                <Label Text="Lista de Vuelos Registrados" TextColor="White" FontSize="20" HorizontalOptions="Center" FontAttributes="Bold"/>
             </Frame>
             <ListView x:Name="lsVuelo" HasUnevenRows="True" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid RowSpacing="20" Padding="20,10,0,40">
-                                <Label Text="cod Vuelo:" Grid.Row="0" />
-                                <Label Text="{Binding IdVuelos}" Grid.Row="0" Grid.Column="1"/>
-                                <Label Text="País Destino:" Grid.Row="1" />
-                                <Label Text="{Binding PaisDestino}" Grid.Row="1" Grid.Column="1" />
-                                <Label Text="Servicios:" Grid.Row="2" />
-                                <Label Text="{Binding Descripcion}" Grid.Row="2" Grid.Column="1"/>
-                                <Label Text="Precio (Soles):" Grid.Row="3" />
-                                <Label Text="{Binding Precio}"  Grid.Column="1" Grid.Row="3"/>
-                                <Button Text="Eliminar Vuelo" Clicked="Eliminar_Clicked" CommandParameter="{Binding .}"  Grid.Row="4" BackgroundColor="Red" TextColor="White" CornerRadius="10"/>
+                            <Grid RowSpacing="10" Padding="20,20,20,30">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="cod Vuelo:" Grid.Row="0"  FontSize="20" />
+                                <Label Text="{Binding IdVuelos}" Grid.Row="0" Grid.Column="1" FontSize="20" TextColor="#2196F3"/>
+                                <Label Text="País Destino:" Grid.Row="1"  FontSize="20" />
+                                <Label Text="{Binding PaisDestino}" Grid.Row="1" Grid.Column="1"  FontSize="18"/>
+                                <Label Text="Servicios:" Grid.Row="2"  FontSize="20"/>
+                                <Label Text="{Binding Descripcion}" Grid.Row="2" Grid.Column="1"  FontSize="18"/>
+                                <Label Text="Precio (Soles):" Grid.Row="3" FontSize="20"/>
+                                <Label Text="{Binding Precio}"  Grid.Column="1" Grid.Row="3"  FontSize="18"/>
+                                <Button Text="Eliminar Vuelo" Clicked="Eliminar_Clicked" CommandParameter="{Binding .}"  Grid.Row="4" Grid.ColumnSpan="2" BackgroundColor="Red" TextColor="White" CornerRadius="10" HorizontalOptions="Center" />
                             </Grid>
                         </ViewCell>
                     </DataTemplate>

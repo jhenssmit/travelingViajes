@@ -21,17 +21,22 @@ namespace travelingViajes.Views
 
         private async void btnLista_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ListaUsuarios());
+            await Navigation.PushModalAsync(new ListaUsuarios());
         }
 
         private async void btnRegistro_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new RegistroVuelos());
+            await Navigation.PushModalAsync(new RegistroVuelos());
         }
 
         private async void btnListaVuelos_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ListaVuelosA());
+            await Navigation.PushModalAsync(new ListaVuelosA());
+        }
+
+        private async void CerrarSesion_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
         }
     }
 }

@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="travelingViajes.Views.RegistroVuelos">
+             x:Class="travelingViajes.Views.RegistroVuelos" BackgroundColor="#F5F5F5">
     <ContentPage.Content>
-        <StackLayout>
-            <Frame BackgroundColor="Blue" HorizontalOptions="Center">
-                <Label Text="Registro de Vuelos" TextColor="White"/>
+        <StackLayout Padding="20" Spacing="20">
+            <Frame BackgroundColor="#2196F3" Padding="10" CornerRadius="10">
+                <Label Text="Registro de Vuelos" TextColor="White" FontSize="Title" HorizontalOptions="Center"/>
             </Frame>
-            <StackLayout>
-                <Label Text="Nombre del País:"/>
+            <StackLayout Spacing="10">
+                <Label Text="País:" FontAttributes="Bold"/>
                 <Entry Placeholder="Ingrese el País" x:Name="txtPais"/>
-                <Label Text="Servicios:"/>
-                <Entry Placeholder="Ingrese aqui los servicios que se ofrece" x:Name="txtServicio"/>
-                <Label Text="Precio:"/>
-                <Entry Placeholder="Ingrese el Precio" x:Name="txtPrecio"/>
-                <Button Text="Registrarse" x:Name="btnRegistro" Clicked="btnRegistro_Clicked"></Button>
+                <Label Text="Servicios:" FontAttributes="Bold"/>
+                <Editor Placeholder="Ingrese aquí los servicios que se ofrecen" x:Name="txtServicio"/>
+                <Label Text="Precio:" FontAttributes="Bold"/>
+                <Entry Placeholder="Ingrese el Precio (Soles)" x:Name="txtPrecio" Keyboard="Numeric"/>
+                <Button Text="Registrar" x:Name="btnRegistro" BackgroundColor="#2196F3" TextColor="White" Clicked="btnRegistro_Clicked"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
