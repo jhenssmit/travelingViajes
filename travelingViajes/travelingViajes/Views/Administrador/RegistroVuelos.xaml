@@ -4,12 +4,17 @@
              x:Class="travelingViajes.Views.RegistroVuelos" BackgroundColor="#F5F5F5">
     <ContentPage.Content>
         <StackLayout Padding="20" Spacing="20">
+            <Button Text="Volver" HorizontalOptions="Start" BackgroundColor="Red" TextColor="White" CornerRadius="10" Margin="10" x:Name="btnVolver" Clicked="btnVolver_Clicked"></Button>
             <Frame BackgroundColor="#2196F3" Padding="10" CornerRadius="10">
                 <Label Text="Registro de Vuelos" TextColor="White" FontSize="Title" HorizontalOptions="Center"/>
             </Frame>
             <StackLayout Spacing="10">
                 <Label Text="País:" FontAttributes="Bold"/>
                 <Entry Placeholder="Ingrese el País" x:Name="txtPais"/>
+                <Label Text="Día de Salida:" FontAttributes="Bold"/>
+                <Editor Placeholder="Ingrese aquí el día de salida del vuelo" x:Name="txtDiaSalida"/>
+                <Label Text="HoraSalida:" FontAttributes="Bold"/>
+                <Editor Placeholder="Ingrese aquí la Hora de Salida" x:Name="txtHoraSalida"/>
                 <Label Text="Servicios:" FontAttributes="Bold"/>
                 <Editor Placeholder="Ingrese aquí los servicios que se ofrecen" x:Name="txtServicio"/>
                 <Label Text="Precio:" FontAttributes="Bold"/>

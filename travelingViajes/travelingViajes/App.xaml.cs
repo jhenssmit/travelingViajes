@@ -11,6 +11,10 @@ namespace travelingViajes
     public partial class App : Application
     {
         static SQLiteHelper db;
+        public static class AppContext
+        {
+            public static string UserId { get; set; }
+        }
 
         public App()
         {

@@ -46,5 +46,10 @@ namespace travelingViajes.Views.Administrador
                 vuelos.Remove(vuelo);
             }
         }
+
+        private async void btnVolver_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopModalAsync();
+        }
     }
 }

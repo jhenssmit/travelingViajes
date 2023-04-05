@@ -16687,6 +16687,9 @@ namespace travelingViajes.Droid
 			// aapt resource value: 0x7F070097
 			public const int vuelo = 2131165335;
 			
+			// aapt resource value: 0x7F070098
+			public const int vuelo1 = 2131165336;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

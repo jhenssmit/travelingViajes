@@ -16,6 +16,7 @@ namespace travelingViajes.Views.Usuario
         public PaginaPrincipalUsuario()
         {
             InitializeComponent();
+            hola.Text = App.AppContext.UserId;
         }
 
         private async void btnDisponible_Clicked(object sender, EventArgs e)
@@ -23,14 +24,14 @@ namespace travelingViajes.Views.Usuario
             await Navigation.PushModalAsync(new ListaVuelosU());
         }
 
-        private void btnReservado_Clicked(object sender, EventArgs e)
+        private async void btnReservado_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushModalAsync(new Reservaciones());
         }
 
         private async void btnCerrarSesion_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PopAsync();
+            await Navigation.PopModalAsync();
         }
     }
 }

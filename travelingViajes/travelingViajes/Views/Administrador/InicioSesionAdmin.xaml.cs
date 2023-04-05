@@ -27,11 +27,11 @@ namespace travelingViajes.Views
             var Admin = await App.SQLiteDB.VerifyAdminCredentialsAsync(usuario, contrasena);
             if (Admin)
             {
-                await Navigation.PushAsync(new PaginaPrincipalAdmin());
+                await Navigation.PushModalAsync(new PaginaPrincipalAdmin());
             }
             else
             {
-                await DisplayAlert("Error", "No se pudo iniciar Sesión", "Ok");
+                await DisplayAlert("Error", "Usuario y/o Contraseña incorrectos", "Ok");
             }
         }
 

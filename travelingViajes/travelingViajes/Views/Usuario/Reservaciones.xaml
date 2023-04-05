@@ -1,32 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="travelingViajes.Views.Usuario.ListaVuelosU" Padding="10"
-             BackgroundColor="#F9F9F9">
-    <ContentPage.Resources>
-        <Style TargetType="Frame" x:Key="CardStyle">
-            <Setter Property="BackgroundColor" Value="#87CEFA" />
-            <Setter Property="CornerRadius" Value="10" />
-            <Setter Property="Margin" Value="10" />
-            <Setter Property="Padding" Value="10" />
-            <Setter Property="HasShadow" Value="True" />
-            
-        </Style>
-
-    </ContentPage.Resources>
+             x:Class="travelingViajes.Views.Usuario.Reservaciones">
     <ContentPage.Content>
         <StackLayout>
-            <Button Text="Volver" HorizontalOptions="Start" BackgroundColor="Red" TextColor="White" CornerRadius="10" Margin="10" x:Name="btnVolver" Clicked="btnVolver_Clicked"></Button>
-            <Frame Style="{StaticResource CardStyle}">
-                <Label Text="Lista de Vuelos Registrados"
-                   TextColor="#333333"
-                   FontSize="24"
-                   FontAttributes="Bold"
-                   HorizontalTextAlignment="Center"
-                   HorizontalOptions="FillAndExpand"
-                   VerticalOptions="CenterAndExpand"/>
-            </Frame>
-            <ListView x:Name="lsVuelo" HasUnevenRows="True" SeparatorVisibility="None">
+            <Label Text="Detalles de la reserva" FontAttributes="Bold" FontSize="Large" Margin="10" />
+            <ListView x:Name="lsServiciosVuelos" HasUnevenRows="True" SeparatorVisibility="None" ItemsSource="{Binding ServiciosVuelos}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -43,9 +22,6 @@
                                     <StackLayout Orientation="Horizontal">
                                         <Label Text="Precio (Soles): " FontSize="14" FontAttributes="Bold" TextColor="#757575"/>
                                         <Label Text="{Binding Precio}" FontSize="14" TextColor="#212121"/>
-                                    </StackLayout>
-                                    <StackLayout Orientation="Horizontal">
-                                        <Button x:Name="Reservar" Text="Reservar" Clicked="Reservar_Clicked"></Button>
                                     </StackLayout>
                                 </StackLayout>
                             </Frame>

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using SQLite;
-
+using SQLiteNetExtensions.Attributes;
 namespace travelingViajes.Models
 {
     public class Usuarios
@@ -23,6 +23,7 @@ namespace travelingViajes.Models
         public string Correo { get; set;}
         [MaxLength(100)]
         public string Contrasena{ get; set;}
-
+        [OneToMany]
+        public List<Reserva> Reservas { get; set; }
     }
 }

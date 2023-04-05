@@ -27,17 +27,21 @@ namespace travelingViajes.Views
                     PaisDestino = txtPais.Text,
                     Descripcion = txtServicio.Text,
                     Precio = txtPrecio.Text,
+                    DiaSalida = txtDiaSalida.Text,
+                    HoraSalida = txtHoraSalida.Text,
                 };
                 await App.SQLiteDB.SaveVuelosAsync(serviciosVuelos);
                 txtPais.Text = "";
                 txtServicio.Text = "";
                 txtPrecio.Text = "";
+                txtDiaSalida.Text = "";
+                txtHoraSalida.Text = "";
                 await DisplayAlert("Registro", "Se registro el vuelo correctamente", "Ok");
 
             }
             else
             {
-                await DisplayAlert("Advertencia", "Ingresar todos los Datos", "Ok");
+                await DisplayAlert("Advertencia", "Porfavor Ingresar todos los Datos", "Ok");
             }
             
         }
@@ -62,6 +66,11 @@ namespace travelingViajes.Views
                 respuesta = true;
             }
             return respuesta;
+        }
+
+        private async void btnVolver_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopModalAsync();
         }
     }
 }

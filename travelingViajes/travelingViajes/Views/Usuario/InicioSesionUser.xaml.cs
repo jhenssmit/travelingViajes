@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using travelingViajes.Models;
 using travelingViajes.Views.Usuario;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -12,6 +13,7 @@ namespace travelingViajes.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class InicioSesionUser : ContentPage
     {
+
         public InicioSesionUser()
         {
             InitializeComponent();
@@ -24,12 +26,13 @@ namespace travelingViajes.Views
 
         private async void btnIniciar_Clicked(object sender, EventArgs e)
         {
-            string Correo = EntryCorreo.Text;
-            string Contrasena = EntryContasena.Text;
-            var Users = await App.SQLiteDB.VerifyUsuariosCredentialsAsync(Correo, Contrasena);
-            if (Users)
+            string correo = EntryCorreo.Text;
+            string contrasena = EntryContasena.Text;
+            var users = await App.SQLiteDB.VerifyUsuariosCredentialsAsync(correo, contrasena);
+            if (users)
             {
-                await Navigation.PushAsync(new PaginaPrincipalUsuario());
+                App.AppContext.UserId = Session.UserId.ToString();
+                await Navigation.PushModalAsync(new PaginaPrincipalUsuario());
             }
             else
             {

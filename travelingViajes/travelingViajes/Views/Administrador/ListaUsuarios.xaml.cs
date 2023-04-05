@@ -29,5 +29,9 @@ namespace travelingViajes.Views
             }
         }
 
+        private async void btnVolver_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopModalAsync();
+        }
     }
 }

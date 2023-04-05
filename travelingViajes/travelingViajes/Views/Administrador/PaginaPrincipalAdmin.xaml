@@ -9,9 +9,10 @@
                 <Image Source="travelingviajes_logo.png" Aspect="AspectFit" Margin="0,20,0,0"/>
             </StackLayout>
             <StackLayout Spacing="20">
+                <Image Source="pagina.png" HeightRequest="205" Margin="0,0,0,10"/>
                 <Button Text="Ver lista de Usuarios" x:Name="btnLista" Clicked="btnLista_Clicked" BackgroundColor="#007aff" TextColor="White" CornerRadius="10" Margin="0,0,0,10"/>
-                    <Button Text="Registrar Paquetes de Vuelos" x:Name="btnRegistro" Clicked="btnRegistro_Clicked" BackgroundColor="#007aff" TextColor="White" CornerRadius="10" Margin="0,0,0,10"/>
-                    <Button Text="Ver lista de Vuelos" x:Name="btnListaVuelos" Clicked="btnListaVuelos_Clicked" BackgroundColor="#007aff" TextColor="White" CornerRadius="10" Margin="0,0,0,10"/>
+                    <Button Text="Registrar Paquetes de Vuelos" x:Name="btnRegistro" Clicked="btnRegistro_Clicked" BackgroundColor="DarkSlateBlue" TextColor="White" CornerRadius="10" Margin="0,0,0,10"/>
+                    <Button Text="Ver lista de Vuelos" x:Name="btnListaVuelos" Clicked="btnListaVuelos_Clicked" BackgroundColor="CadetBlue" TextColor="White" CornerRadius="10" Margin="0,0,0,10"/>
                     <Button Text="Cerrar Sesión"
                         Margin="0,10,0,0"
                         BackgroundColor="#dc3545"

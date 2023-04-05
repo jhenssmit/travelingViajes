@@ -5,7 +5,7 @@
     <StackLayout Padding="10" Spacing="20" VerticalOptions="Center">
         <Label Text="Bienvenido a TravelingViajes" TextColor="#333333" HorizontalOptions="Center" FontSize="24" FontAttributes="Bold"></Label>
         <Frame CornerRadius="10" BackgroundColor="#ffffff" HasShadow="True">
-            <Image Source="vuelo.png" Aspect="AspectFit" HeightRequest="250" ></Image>
+            <Image Source="vuelo1.png" Aspect="AspectFit" HeightRequest="250" ></Image>
         </Frame>
         <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Spacing="10">
             <Button Text="Iniciar Sesión como usuario" x:Name="btnUser" Clicked="btnUser_Clicked" BackgroundColor="#4CAF50" TextColor="#ffffff" CornerRadius="20"></Button>

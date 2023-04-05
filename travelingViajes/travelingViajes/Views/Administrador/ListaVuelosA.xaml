@@ -13,6 +13,7 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
+            <Button Text="Volver" HorizontalOptions="Start" BackgroundColor="IndianRed" TextColor="White" CornerRadius="10" Margin="10" x:Name="btnVolver" Clicked="btnVolver_Clicked"></Button>
                 <Frame  BackgroundColor="{StaticResource primaryColor}"  CornerRadius="10">
                 <Label Text="Lista de Vuelos Registrados" TextColor="White" FontSize="20" HorizontalOptions="Center" FontAttributes="Bold"/>
             </Frame>
@@ -22,18 +23,21 @@
                         <ViewCell>
                             <Grid RowSpacing="10" Padding="20,20,20,30">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
                                 <Label Text="cod Vuelo:" Grid.Row="0"  FontSize="20" />
                                 <Label Text="{Binding IdVuelos}" Grid.Row="0" Grid.Column="1" FontSize="20" TextColor="#2196F3"/>
                                 <Label Text="País Destino:" Grid.Row="1"  FontSize="20" />
                                 <Label Text="{Binding PaisDestino}" Grid.Row="1" Grid.Column="1"  FontSize="18"/>
-                                <Label Text="Servicios:" Grid.Row="2"  FontSize="20"/>
-                                <Label Text="{Binding Descripcion}" Grid.Row="2" Grid.Column="1"  FontSize="18"/>
-                                <Label Text="Precio (Soles):" Grid.Row="3" FontSize="20"/>
-                                <Label Text="{Binding Precio}"  Grid.Column="1" Grid.Row="3"  FontSize="18"/>
-                                <Button Text="Eliminar Vuelo" Clicked="Eliminar_Clicked" CommandParameter="{Binding .}"  Grid.Row="4" Grid.ColumnSpan="2" BackgroundColor="Red" TextColor="White" CornerRadius="10" HorizontalOptions="Center" />
+                                <Label Text="Dia de Salida:" Grid.Row="2"  FontSize="20"/>
+                                <Label Text="{Binding DiaSalida}"  Grid.Column="1" Grid.Row="2"  FontSize="18"/>
+                                <Label Text="Hora de Salida:" Grid.Row="3" FontSize="20"/>
+                                <Label Text="{Binding HoraSalida}"  Grid.Column="1" Grid.Row="3"  FontSize="18"/>
+                                <Label Text="Servicios:" Grid.Row="4" FontSize="20"/>
+                                <Label Text="{Binding Descripcion}" Grid.Row="4" Grid.Column="1"  FontSize="18"/>
+                                <Label Text="Precio (Soles):" Grid.Row="5" FontSize="20"/>
+                                <Label Text="{Binding Precio}"  Grid.Column="1" Grid.Row="5"  FontSize="18"/>
+                                <Button Text="Eliminar Vuelo" Clicked="Eliminar_Clicked" CommandParameter="{Binding .}"  Grid.Row="6" Grid.ColumnSpan="2" BackgroundColor="red" TextColor="White" CornerRadius="10" HorizontalOptions="Center" />
                             </Grid>
                         </ViewCell>
                     </DataTemplate>

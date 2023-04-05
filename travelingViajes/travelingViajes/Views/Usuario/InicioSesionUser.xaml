@@ -4,7 +4,7 @@
              x:Class="travelingViajes.Views.InicioSesionUser" Padding="20" BackgroundColor="#F8F8F8">
     <ContentPage.Content>
         <StackLayout Spacing="20">
-            <Image Source="usuario.png" HeightRequest="200" Margin="0,0,0,10"/>
+            <Image Source="vuelo.png" HeightRequest="210" Margin="0,0,0,10"/>
             <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
                 <Label Text="Inicio de Sesión" FontSize="24" FontAttributes="Bold" TextColor="#4A4A4A"/>
             </StackLayout>

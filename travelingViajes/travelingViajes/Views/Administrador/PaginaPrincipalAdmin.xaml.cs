@@ -16,7 +16,6 @@ namespace travelingViajes.Views
         public PaginaPrincipalAdmin()
         {
             InitializeComponent();
-
         }
 
         private async void btnLista_Clicked(object sender, EventArgs e)
@@ -36,7 +35,7 @@ namespace travelingViajes.Views
 
         private async void CerrarSesion_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PopAsync();
+            await Navigation.PopModalAsync();
         }
     }
 }
