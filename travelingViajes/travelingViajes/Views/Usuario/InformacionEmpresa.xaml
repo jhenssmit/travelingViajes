@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="travelingViajes.Views.Usuario.InformacionEmpresa" Padding="20" BackgroundColor="#E4F1FE">
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <Style TargetType="Frame">
+            <Setter Property="HasShadow" Value="True" />
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="Margin" Value="0,10" />
+            <Setter Property="Padding" Value="10" />
+        </Style>
+    </ResourceDictionary>
+</ContentPage.Resources>
+<ContentPage.Content>
+    <ScrollView>
+        <StackLayout>
+            <Frame BackgroundColor="Blue" CornerRadius="10" Margin="0,20,0,0">
+                <Frame.Content>
+                    <Label Text="Información de la Empresa"
+                               FontAttributes="Bold"
+                               FontSize="Large"
+                               TextColor="White"
+                               Margin="10"/>
+                </Frame.Content>
+            </Frame>
+            <StackLayout BackgroundColor="#F9F9F9"  Padding="10">
+                <StackLayout Orientation="Horizontal" Margin="0,10">
+                    <Image Source="usuario.png" Aspect="AspectFit" HeightRequest="50" WidthRequest="50"/>
+                    <Label Text="Travelings Viajes"
+                               FontAttributes="Bold"
+                               FontSize="Medium"
+                               VerticalOptions="Center"
+                               Margin="10,0,0,0"/>
+                </StackLayout>
+                <Label Text="Misión de la Empresa:"
+                           FontAttributes="Bold"
+                           TextColor="#306EFF"/>
+                <Label Text="Nos esforzamos por proporcionar soluciones innovadoras y sostenibles que satisfagan las necesidades de nuestros clientes mientras protegemos el medio ambiente."
+                           TextColor="#555555"/>
+                <Label Text="Visión de la Empresa:"
+                           FontAttributes="Bold"
+                           TextColor="#306EFF"/>
+                <Label Text="Ser líderes en el mercado al ofrecer tecnologías y servicios de vanguardia que permitan una mejor calidad de vida para las personas y el planeta."
+                           TextColor="#555555"/>
+                <Label Text="Valores de la Empresa:"
+                           FontAttributes="Bold"
+                           TextColor="#306EFF"/>
+                <Label Text="Integridad: actuamos de manera ética y transparente en todas nuestras operaciones."
+                           TextColor="#555555"/>
+                <Label Text="Innovación: fomentamos la creatividad y la experimentación para impulsar soluciones nuevas y efectivas."
+                           TextColor="#555555"/>
+                <Label Text="Excelencia: nos esforzamos por superar las expectativas y entregar resultados de alta calidad."
+                           TextColor="#555555"/>
+                <Label Text="Sostenibilidad: nos comprometemos a proteger el medio ambiente y a actuar de manera responsable."
+                           TextColor="#555555"/>
+                <Label Text="Contacto:"
+                           FontAttributes="Bold"
+                           TextColor="#306EFF"/>
+                    <Label Text="+51 954875412"
+                           TextColor="#555555"/>
+                    <Label Text="Ubicación:"
+                           FontAttributes="Bold"
+                           TextColor="#306EFF"/>
+                <Label Text="Jr. Loreto #883"
+                           TextColor="#555555"/>
+                   <Label Text="Gmail:"
+                           FontAttributes="Bold"
+                           TextColor="#306EFF"/>
+                    <Label Text="TravelingViajes@gmail.com"
+                           TextColor="#555"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

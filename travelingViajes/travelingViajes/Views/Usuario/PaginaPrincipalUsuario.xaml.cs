@@ -33,5 +33,10 @@ namespace travelingViajes.Views.Usuario
         {
             await Navigation.PopModalAsync();
         }
+
+        private async void btnInformacion_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new InformacionEmpresa());
+        }
     }
 }

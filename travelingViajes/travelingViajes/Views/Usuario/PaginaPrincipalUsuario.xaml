@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="travelingViajes.Views.Usuario.PaginaPrincipalUsuario">
     <ContentPage.Content>
+        <ScrollView>
         <StackLayout>
             <Frame BackgroundColor="Blue" CornerRadius="10" Margin="10" Padding="10">
                 <StackLayout>
@@ -12,12 +13,14 @@
             </Frame>
             <StackLayout Margin="20">
                 <Image Source="bienvenidoVuelo.png" HeightRequest="285" Margin="0,0,0,10"/>
-                <Label x:Name="hola" Text="aqui" FontSize="20"></Label>
+                    <Label x:Name="hola" Text="aqui" FontSize="20" IsVisible="false"></Label>
                 <Label Text="¿Qué deseas hacer?" FontSize="Large" Margin="0,20,0,10"/>
                 <Button Text="Ver vuelos disponibles" x:Name="btnDisponible" BackgroundColor="#2196F3" TextColor="White" Clicked="btnDisponible_Clicked" CornerRadius="20"/>
                 <Button Text="Ver mis reservas" x:Name="btnReservado" BackgroundColor="#2196F3" TextColor="White" Clicked="btnReservado_Clicked" CornerRadius="20"/>
+                <Button Text="Ver Información de la Empresa" x:Name="btnInformacion" BackgroundColor="#2196F9" TextColor="White" Clicked="btnInformacion_Clicked" CornerRadius="20"/>
                 <Button Text="Cerrar sesión" x:Name="btnCerrarSesion" BackgroundColor="#FF5722" TextColor="White" CornerRadius="20" HorizontalOptions="Center" Clicked="btnCerrarSesion_Clicked"/>
             </StackLayout>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
