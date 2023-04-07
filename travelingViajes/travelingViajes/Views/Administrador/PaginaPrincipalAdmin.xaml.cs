@@ -37,5 +37,10 @@ namespace travelingViajes.Views
         {
             await Navigation.PopModalAsync();
         }
+
+        private async void btnListaVuelosReservados_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new ListaVuelosReservados());
+        }
     }
 }

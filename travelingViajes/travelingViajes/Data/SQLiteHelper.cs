@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using SQLite;
 using travelingViajes.Models;
 using Xamarin.Forms.Database.Models;
+using System.Linq;
+using System.Security.Cryptography;
 
 namespace travelingViajes.Data
 {
@@ -88,7 +90,17 @@ namespace travelingViajes.Data
         {
             return db.Table<ServiciosVuelos>().Where(a => a.IdVuelos == IdVuelo).FirstOrDefaultAsync();
         }
+        //lista reservas usuario
+        public async Task<List<ReservaViewModel>> GetReservacionByUserIdAsync()
+        {
+            var detalles = await db.QueryAsync<ReservaViewModel>(
+        "SELECT r.UserId, r.IdVuelos, u.Nombres AS NombreUsuario, v.PaisDestino, v.DiaSalida, v.HoraSalida, v.Descripcion, v.Precio " +
+        "FROM Reserva r " +
+        "JOIN ServiciosVuelos v ON r.IdVuelos = v.IdVuelos " +
+        "JOIN Usuarios u ON r.UserId = u.IdUsuario");
 
+            return detalles;
+        }
         //reservar el vuelo
         public async Task<bool> SaveReservaAsync(ServiciosVuelos vuelo, string userId)
         {
@@ -144,6 +156,15 @@ namespace travelingViajes.Data
             }
         
 
+        }
+        //ver lista de reserva
+        public Task<List<Reserva>> GetReservaAsync()
+        {
+            return db.Table<Reserva>().ToListAsync();
+        }
+        public Task<Reserva> GetReservaById(int IdAdmin)
+        {
+            return db.Table<Reserva>().Where(a => a.Id == IdAdmin).FirstOrDefaultAsync();
         }
         //Eliminar Vuelos
         public Task<int> DeleteVuelo(ServiciosVuelos Vuelos)

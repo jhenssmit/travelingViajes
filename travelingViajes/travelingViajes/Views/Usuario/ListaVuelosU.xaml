@@ -17,15 +17,18 @@
     <ContentPage.Content>
         <StackLayout>
             <Button Text="Volver" HorizontalOptions="Start" BackgroundColor="Red" TextColor="White" CornerRadius="10" Margin="10" x:Name="btnVolver" Clicked="btnVolver_Clicked"></Button>
-            <Frame Style="{StaticResource CardStyle}">
-                <Label Text="Lista de Vuelos Registrados"
-                   TextColor="#333333"
-                   FontSize="24"
-                   FontAttributes="Bold"
-                   HorizontalTextAlignment="Center"
-                   HorizontalOptions="FillAndExpand"
-                   VerticalOptions="CenterAndExpand"/>
-            </Frame>
+            <Grid Padding="10">
+                <Frame Style="{StaticResource CardStyle}"
+           CornerRadius="10"
+           HasShadow="True">
+                    <Label Text="Lista de Vuelos Registrados"
+               TextColor="#333333"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"
+               VerticalOptions="CenterAndExpand"/>
+                </Frame>
+            </Grid>
             <ListView x:Name="lsVuelo" HasUnevenRows="True" SeparatorVisibility="None">
                 <ListView.ItemTemplate>
                     <DataTemplate>
