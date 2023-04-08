@@ -34,6 +34,10 @@ namespace travelingViajes.Views.Usuario
             viewModel = new ResumenReservaViewModel(serviciosVuelos);
             BindingContext = viewModel;
         }
-        
+
+        private async void btnVolver_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopModalAsync();
+        }
     }
 }

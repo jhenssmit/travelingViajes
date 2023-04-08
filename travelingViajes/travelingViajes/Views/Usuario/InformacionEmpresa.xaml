@@ -15,7 +15,8 @@
 <ContentPage.Content>
     <ScrollView>
         <StackLayout>
-            <Frame BackgroundColor="Blue" CornerRadius="10" Margin="0,20,0,0">
+                <Button Text="Volver" HorizontalOptions="Start" BackgroundColor="Red" TextColor="White" CornerRadius="10" Margin="10" x:Name="btnVolver" Clicked="btnVolver_Clicked"></Button>
+                <Frame BackgroundColor="Blue" CornerRadius="10" Margin="0,20,0,0">
                 <Frame.Content>
                     <Label Text="Información de la Empresa"
                                FontAttributes="Bold"

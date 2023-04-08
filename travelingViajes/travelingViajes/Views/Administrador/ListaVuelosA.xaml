@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:modelos="clr-namespace:travelingViajes.Models"
-             x:Class="travelingViajes.Views.Administrador.ListaVuelosA" Padding="10">
+             x:Class="travelingViajes.Views.Administrador.ListaVuelosA" Padding="10" BackgroundColor="#A3FFFF">
     <ContentPage.Resources>
         <Color x:Key="primaryColor">#2196F3</Color>
         <Color x:Key="secondaryColor">#F44336</Color>

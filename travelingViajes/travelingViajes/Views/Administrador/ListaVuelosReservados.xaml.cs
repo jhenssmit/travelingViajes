@@ -12,10 +12,10 @@ namespace travelingViajes.Views.Administrador
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ListaVuelosReservados : ContentPage
     {
-        
+
         public ListaVuelosReservados()
         {
-         
+
 
             InitializeComponent();
             BindingContext = new ListaVuelosReservadosViewModel();
@@ -30,7 +30,6 @@ namespace travelingViajes.Views.Administrador
 
             if (reservas != null && reservas.Any())
             {
-                await DisplayAlert("Reservas", $"Se encontraron {reservas.Count} reservas", "OK");
                 var viewModel = (ListaVuelosReservadosViewModel)BindingContext;
                 viewModel.reservas = reservas;
                 lsServiciosVuelos.ItemsSource = viewModel.reservas;
@@ -39,21 +38,26 @@ namespace travelingViajes.Views.Administrador
             {
                 await DisplayAlert("Reservas", "No se encontraron reservas", "OK");
             }
-            
+
             // Establecer la lista de reservas como el BindingContext de la página
 
         }
 
-    }
 
-    public class ListaVuelosReservadosViewModel
-    {
-        public List<ReservaViewModel> reservas { get; set; }
-
-        public ListaVuelosReservadosViewModel()
+        public class ListaVuelosReservadosViewModel
         {
-            // Inicializar la lista de reservas aquí
-            reservas = new List<ReservaViewModel>();
+            public List<ReservaViewModel> reservas { get; set; }
+
+            public ListaVuelosReservadosViewModel()
+            {
+                // Inicializar la lista de reservas aquí
+                reservas = new List<ReservaViewModel>();
+            }
+        }
+
+        private async void btnVolver_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopModalAsync();
         }
     }
 }
